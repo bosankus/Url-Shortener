@@ -16,11 +16,14 @@ class DatabaseProviderImpl(private val clientName: String) : DatabaseProvider {
     override val initializeName: String
         get() = clientName
 
+
     override val mongoClient: CoroutineClient
         get() = KMongo.createClient().coroutine
 
+
     override val database: CoroutineDatabase
         get() = mongoClient.getDatabase(initializeName)
+
 
     override val urlCollection: CoroutineCollection<UrlEntity>
         get() = database.getCollection()

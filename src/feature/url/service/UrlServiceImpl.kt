@@ -36,7 +36,7 @@ class UrlServiceImpl(private val urlCollection: CoroutineCollection<UrlEntity>) 
         updateCount(urlEntity)
         return urlEntity?.originalUrl
     }
-    
+
 
     override suspend fun checkIfUrlIsPresent(url: String): Boolean {
         return findShortUrl(url) != null
