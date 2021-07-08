@@ -8,9 +8,9 @@ import java.util.*
 
 fun currentDateInstant(): String = Date().toInstant().toString()
 
-fun generateRandomUrl(lenght: Int = 6): String {
+fun generateRandomUrl(length: Int = 6): String {
     val allowedChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')
-    return (1..lenght)
+    return (1..length)
         .map { allowedChars.random() }
         .joinToString("")
 }
