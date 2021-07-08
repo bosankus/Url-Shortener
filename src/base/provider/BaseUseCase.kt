@@ -1,4 +1,4 @@
-package com.androidplay.ktor.base
+package com.androidplay.ktor.base.provider
 
 import com.androidplay.ktor.util.BaseResponse
 

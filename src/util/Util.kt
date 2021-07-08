@@ -1,5 +1,6 @@
 package com.androidplay.ktor.util
 
+import java.net.URL
 import java.util.*
 
 /**
@@ -13,4 +14,13 @@ fun generateRandomUrl(length: Int = 6): String {
     return (1..length)
         .map { allowedChars.random() }
         .joinToString("")
+}
+
+fun isValid(url: String?): Boolean {
+    return try {
+        URL(url).toURI()
+        true
+    } catch (e: Exception) {
+        false
+    }
 }

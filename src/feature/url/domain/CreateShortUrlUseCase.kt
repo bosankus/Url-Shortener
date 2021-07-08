@@ -1,6 +1,6 @@
 package com.androidplay.ktor.feature.url.domain
 
-import com.androidplay.ktor.base.BaseUseCase
+import com.androidplay.ktor.base.provider.BaseUseCase
 import com.androidplay.ktor.feature.url.repository.UrlRepository
 import com.androidplay.ktor.util.BaseResponse
 

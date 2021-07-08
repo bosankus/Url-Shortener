@@ -13,4 +13,10 @@ data class UrlEntity(
     val shortUrl: String,
     val createdAt: String,
     val urlHitCount: Int = 0
-)
+) {
+    companion object {
+        const val URL = "/v1/url"
+        const val URL_COUNT = "/v1/{url}/count"
+        const val SHORT_URL = "/{url}"
+    }
+}
