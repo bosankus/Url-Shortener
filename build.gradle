@@ -28,6 +28,12 @@ repositories {
     maven { url 'https://kotlin.bintray.com/ktor' }
 }
 
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation "io.ktor:ktor-server-netty:$ktor_version"
@@ -40,4 +46,8 @@ dependencies {
 
     // Kmongo
     implementation "org.litote.kmongo:kmongo-coroutine:$kmongo_version"
+
+    // Ktor HTML builder
+    implementation "io.ktor:ktor-html-builder:$ktor_version"
+
 }

@@ -18,5 +18,6 @@ data class UrlEntity(
         const val URL = "/v1/url"
         const val URL_COUNT = "/v1/{url}/count"
         const val SHORT_URL = "/{url}"
+        const val FORM_URL = "/v1/form"
     }
 }
